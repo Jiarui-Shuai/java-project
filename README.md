@@ -1,3 +1,7 @@
+**这个作品来自 Visual Studio Code**
+
+**VS Code的README原文如下：**
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
