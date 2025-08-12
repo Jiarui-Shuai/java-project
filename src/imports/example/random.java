@@ -14,7 +14,8 @@ public class random {
     }
 
     public static char randChar() {
-        return (char) (Math.random() * 26 + 'a');
+        String chars = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"; 
+        return chars.charAt((int) (Math.random() * chars.length()));
     }
 
     public static String randString(int length) {
