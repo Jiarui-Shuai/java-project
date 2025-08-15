@@ -1,4 +1,5 @@
 import imports.example.inputs;
+import imports.example.maths;
 import imports.example.module;
 import imports.example.times;
 import imports.example.random;
@@ -6,10 +7,16 @@ import imports.example.random;
 public class App {
     public static void main(String[] args) {
         try {
+            for(String arg : args){
+                System.out.println(arg);
+            }
+            System.out.println(module.times_str(50, "="));
+
             System.out.println("Hello, World!");
             String input = inputs.input("Enter your name: ");
             System.out.println("Hello, "+input+"!");
             System.out.println(module.times_str(50, "="));
+            
             for(int i=1; i<=10; i++){
                 System.out.print("loading:");
                 System.out.print(i);
@@ -29,6 +36,7 @@ public class App {
             }
             System.out.println("Loading complete.");
             System.out.println(module.times_str(50, "="));
+
             System.out.println("Time: ");
             System.out.println((long)times.GetTime(1));
             var rand = random.randDouble(0, 1);
@@ -37,6 +45,8 @@ public class App {
             System.out.println("Random long: "+rand2);
             System.out.println(module.times_str(50, "="));
             System.out.println(inputs.input("Enter some: "));
+            System.out.println(maths.evaluate("2+3*4/5"));
+
         } finally{
             inputs.closeScanner();
         }
