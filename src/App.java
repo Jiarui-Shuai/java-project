@@ -5,7 +5,7 @@ import imports.example.random;
 
 public class App {
     public static void main(String[] args) {
-        try {    
+        try {
             System.out.println("Hello, World!");
             String input = inputs.input("Enter your name: ");
             System.out.println("Hello, "+input+"!");
