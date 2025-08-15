@@ -20,9 +20,10 @@ public class App {
                 PackageName += random.randLetters((int)random.randLong(1, 5));
                 System.out.print(PackageName);
                 long Size = random.randLong(1000000, 5000000);
-                System.out.print(" "+Size+" bytes");
-                
-                module.sleep(Size/1000000);
+                System.out.print(" ");
+                System.out.printf("%.2f", ((double)Size)/1000000.0);
+                System.out.print(" MiB");
+                module.sleep(Size/1_000_000);
                 
                 System.out.print("\r\033[2K");
             }
