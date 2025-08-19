@@ -3,6 +3,7 @@ import imports.example.maths;
 import imports.example.module;
 import imports.example.times;
 import imports.example.random;
+import imports.example.*;
 
 public class App {
     public static void main(String[] args) {
@@ -26,9 +27,9 @@ public class App {
                 PackageName += random.randLetters((int)random.randLong(1, 5))+".";
                 PackageName += random.randLetters((int)random.randLong(1, 5));
                 System.out.print(PackageName);
-                long Size = random.randLong(1000000, 5000000);
+                long Size = random.randLong(1_000_000, 5_000_000);
                 System.out.print(" ");
-                System.out.printf("%.2f", ((double)Size)/1000000.0);
+                System.out.printf("%.2f", ((double)Size)/1_000_000.0);
                 System.out.print(" MiB");
                 module.sleep(Size/1_000_000);
                 
@@ -46,6 +47,12 @@ public class App {
             System.out.println(module.times_str(50, "="));
             System.out.println(inputs.input("Enter some: "));
             System.out.println(maths.evaluate("2+3*4/5"));
+
+            String snbT = inputs.input("Enter a  SNBT:");
+            SNBT snbt = SNBT.ParseSNBT(snbT);
+            System.out.println(snbt.GetValue(inputs.input("Enter a path: ")));
+            snbt.SetValue(inputs.input("Enter a path: "), inputs.input("Enter a value: "));
+            System.out.println(snbt.GetValue(inputs.input("Enter a path: ")));           
 
         } finally{
             inputs.closeScanner();
