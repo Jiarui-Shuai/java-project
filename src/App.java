@@ -1,8 +1,3 @@
-import imports.example.inputs;
-import imports.example.maths;
-import imports.example.module;
-import imports.example.times;
-import imports.example.random;
 import imports.example.*;
 
 public class App {
@@ -48,11 +43,11 @@ public class App {
             System.out.println(inputs.input("Enter some: "));
             System.out.println(maths.evaluate("2+3*4/5"));
 
-            String snbT = inputs.input("Enter a  SNBT:");
-            SNBT snbt = SNBT.ParseSNBT(snbT);
-            System.out.println(snbt.GetValue(inputs.input("Enter a path: ")));
-            snbt.SetValue(inputs.input("Enter a path: "), inputs.input("Enter a value: "));
-            System.out.println(snbt.GetValue(inputs.input("Enter a path: ")));           
+            // String snbT = inputs.input("Enter a  SNBT:");
+            // SNBT snbt = SNBT.ParseSNBT(snbT);
+            // System.out.println(snbt.GetValue(inputs.input("Enter a path: ")));
+            // snbt.SetValue(inputs.input("Enter a path: "), inputs.input("Enter a value: "));
+            // System.out.println(snbt.GetValue(inputs.input("Enter a path: ")));           
 
         } finally{
             inputs.closeScanner();
